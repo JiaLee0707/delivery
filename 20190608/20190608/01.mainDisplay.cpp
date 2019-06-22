@@ -13,7 +13,7 @@ int main() {
 		if (money <= 0)
 			cout << "돈이 0원보다 작거나 같습니다." << endl << endl;
 	} while (money <= 0);
-	cout << "안녕";
+	cout << "안녕하세요";
 	return 0;
 }
 void MainDisplayView() {
