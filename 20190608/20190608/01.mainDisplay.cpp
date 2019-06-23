@@ -51,7 +51,7 @@ int main() {
 		gotoxy(5, 15);
 		do
 		{
-			cout << "입금하실 돈을 입력해주세요 : ";
+			cout << "입금하실 돈을 입력해주세요 : .";
 			cin >> money;
 			if (money <= 0)
 				cout << "돈이 0원보다 작거나 같습니다." << endl << endl;
