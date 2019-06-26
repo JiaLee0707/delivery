@@ -71,4 +71,6 @@ int main() {
 			cout << "돈이 0원보다 작거나 같습니다." << endl << endl;
 		}
 	} while (money <= 0);
+	cout << "\n\n\n\n\n\n\n\n\n";
+	return 0;
 }
