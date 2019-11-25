@@ -72,5 +72,6 @@ int main() {
 		}
 	} while (money <= 0);
 	cout << "\n\n\n\n\n\n\n\n\n";
+	//system("cls");
 	return 0;
 }
