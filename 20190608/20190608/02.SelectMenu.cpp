@@ -76,6 +76,8 @@ void PrintChicken(int x, int y) {
 	cout << "□□  □□\n";
 	gotoxy(36, y + 1);
 	cout << "1. 치킨";
+	gotoxy(36, y + 2);
+	cout << "15,000원";
 }
 
 void PrintPizza(int x, int y) {
@@ -105,6 +107,8 @@ void PrintPizza(int x, int y) {
 	cout << "    ■■□□□□□□□■□□□□□□" << endl;
 	gotoxy(76, y + 2);
 	cout << "2. 피자";
+	gotoxy(76, y + 3);
+	cout << "13,000원";
 }
 
 void PrintCoffee(int x, int y) {
@@ -138,6 +142,8 @@ void PrintCoffee(int x, int y) {
 	cout << "   □□□□□□□□□" << endl;
 	gotoxy(36, y + 1);
 	cout << "3. 카페";
+	gotoxy(36, y + 2);
+	cout << "12,000원";
 }
 void PrintOne(int x, int y) {
 	gotoxy(x++, y++);
@@ -172,6 +178,8 @@ void PrintOne(int x, int y) {
 	cout << " ■■■■■■■■■" << endl;
 	gotoxy(76, y + 1);
 	cout << "4. 1인분";
+	gotoxy(76, y + 2);
+	cout << "7,000원";
 }
 void PrintTakeout(int x, int y) {
 	gotoxy(x++, y++);
@@ -192,6 +200,8 @@ void PrintTakeout(int x, int y) {
 	cout << "                        ■■■■" << endl;
 	gotoxy(33, y + 3);
 	cout << "5. 테이크아웃";
+	gotoxy(33, y + 4);
+	cout << "11,000원";
 }
 void PrintRanking(int x, int y) {
 	gotoxy(x++, y++);
@@ -216,6 +226,8 @@ void PrintRanking(int x, int y) {
 	cout << "■■■■■■■■■■■■■■■" << endl;
 	gotoxy(75, y + 2);
 	cout << "6. 맛집랭킹";
+	gotoxy(75, y + 3);
+	cout << "17,500원";
 }
 int main() {
 	gotoxy(54, 1);
