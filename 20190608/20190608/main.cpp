@@ -13,10 +13,6 @@ int main() {
 	mainP.title();					 //타이틀 명
 
 
-	if (mainP.money > 0) {
-		system("cls");
-		chose1 c1;
-	}
 
 	return 0;
 }

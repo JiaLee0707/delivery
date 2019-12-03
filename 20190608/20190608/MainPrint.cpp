@@ -1,7 +1,11 @@
 #include "Print.h"
 #include "mainPrint.h"
+#include "Signin.h"
 #include <iostream>
 #include <windows.h>
+#include <string>
+#include<fstream>
+
 void mainPrint::title() {
 	//배달어때
 	gotoxy(5, 4);
@@ -25,17 +29,18 @@ void mainPrint::title() {
 	gotoxy(5, 13);
 	cout << "            ■    ■       ■■■■■■■■                      ■                  ■  ■" << endl;
 
-	//돈 입력
-	do
-	{
-		gotoxy(37, 17);
-		cout << "입금하실 돈을 입력해주세요 : ";
-		gotoxy(67, 17);
-		cin >> money;
-		if (money <= 0) {
-			gotoxy(67, 18);
-			cout << "돈이 0원보다 작거나 같습니다." << endl << endl;
-		}
-	} while (money <= 0);
+	//로그인 회원가입 선택
+	string a;
+	gotoxy(47, 17);
+	cout << "로그인 \t 회원가입";
+	gotoxy(52, 20);
+	cin >> a;
+	if (a == "로그인") {
 
+	}
+	else if (a == "회원가입") {
+		system("cls");
+		Signin sign;
+
+	}
 };
