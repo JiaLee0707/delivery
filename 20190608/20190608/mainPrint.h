@@ -8,6 +8,7 @@ public:
 	int money = 0;
 public:
 	void title();
+	int Check();
 };
 
 #endif
