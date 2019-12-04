@@ -4,6 +4,7 @@
 class MenuInfo {
 public:
 	void menuInfo(int num);
+	int Order();
 };
 
 #endif // !MENUINFO_H

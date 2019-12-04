@@ -1,18 +1,18 @@
 #include "Print.h"
 #include "mainPrint.h"
 #include "Signin.h"
-#include "chose1.h"
+#include "Login.h"
 #include <iostream>
 #include <windows.h>
 #include <string>
-#include<fstream>
+#include <fstream>
 #include <conio.h>
-#define UP 72
-#define DOWN 80
-#define SUBMIT 13
 
 int x = 50;
 int y = 18;
+const int UP = 72;
+const int DOWN = 80;
+const int SUBMIT = 13;
 
 void mainPrint::title() {
 	//배달어때
@@ -40,16 +40,17 @@ void mainPrint::title() {
 	//로그인 회원가입 선택	
 	string a;
 
-	gotoxy(x, y);
-	cout << "로그인";
+	gotoxy(x - 2, y);
+	cout << "> 로그인" << y;
 	gotoxy(x, y + 1);
 	cout << "회원가입";
+	gotoxy(x - 2, y);
 
 	int chk = Check();
 
 	if (chk == 1) {
 		system("cls");
-		chose1 c1;
+		Login login;
 	}
 	else if (chk == 2) {
 		system("cls");
@@ -88,9 +89,11 @@ int mainPrint::Check() {
 			} // if -32
 			else if (c == SUBMIT) {
 				if (y == 18) {
+					//--y;
 					return 1;
 				}
 				else if (y == 19) {
+					//--y;
 					return 2;
 				}
 			}

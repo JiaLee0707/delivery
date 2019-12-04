@@ -1,6 +1,5 @@
 #include "mainPrint.h"
 #include "Print.h"
-#include "chose1.h"
 #include <iostream>
 #include <windows.h>
 
