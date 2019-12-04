@@ -1,5 +1,6 @@
 #include "Print.h"
 #include "chose1.h"
+#include "MenuInfo.h"
 #include <iostream>
 #include <windows.h>
 using namespace std;
@@ -39,7 +40,7 @@ void chose1::PrintChicken(int x, int y) {
 	gotoxy(x, y++);
 	cout << "□□  □□\n";
 	gotoxy(36, y + 1);
-	cout << "> 1. 치킨";
+	cout << "1. 치킨";
 	gotoxy(36, y + 2);
 	cout << "15,000원";
 }
@@ -160,9 +161,9 @@ void chose1::PrintTakeout(int x, int y) {
 	cout << "■■■■■■■        ■       ■" << endl;
 	gotoxy(x, y++);
 	cout << "                        ■■■■" << endl;
-	gotoxy(33, y + 3);
-	cout << "5. 테이크아웃";
 	gotoxy(33, y + 4);
+	cout << "5. 테이크아웃";
+	gotoxy(33, y + 5);
 	cout << "11,000원";
 }
 void chose1::PrintRanking(int x, int y) {
@@ -186,9 +187,9 @@ void chose1::PrintRanking(int x, int y) {
 	cout << "■■■■■■■■■■■■■■■" << endl;
 	gotoxy(x, y++);
 	cout << "■■■■■■■■■■■■■■■" << endl;
-	gotoxy(77, y + 2);
-	cout << "6. 맛집랭킹";
 	gotoxy(77, y + 3);
+	cout << "6. 맛집랭킹";
+	gotoxy(77, y + 4);
 	cout << "17,500원";
 }
 chose1::chose1() {
@@ -209,5 +210,18 @@ chose1::chose1() {
 	PrintTakeout(FoodGap_x - 7, FoodGap_y + 48);
 	PrintRanking(FoodGap_x + 37, FoodGap_y + 47);
 
-	gotoxy(0, SquareGap_y++);
+	int num; //주문번호임
+	gotoxy(FoodGap_x - 7, FoodGap_y + 65);
+	cout << "주문 번호를 입력하세요 : ";
+	cin >> num;
+	system("cls");
+	MenuInfo m;
+	m.menuInfo(num);
+
+
+	getchar();
+	getchar();
+	getchar();
+	//gotoxy(0, SquareGap_y++);
+	//cout << SquareGap_y++;
 }

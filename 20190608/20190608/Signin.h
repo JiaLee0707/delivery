@@ -3,7 +3,7 @@
 
 using namespace std;
 class Signin {
-public :
+public:
 	Signin();
 	void FinishCheck();
 	void GoMain();

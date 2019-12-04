@@ -1,10 +1,11 @@
 #include "Print.h"
 #include "mainPrint.h"
 #include "Signin.h"
+#include "chose1.h"
 #include <iostream>
 #include <windows.h>
 #include <string>
-#include<fstream>
+#include <fstream>
 using namespace std;
 
 Signin::Signin() {
@@ -20,18 +21,18 @@ Signin::Signin() {
 	cout << "\n";
 	if (out_num == 1) {
 		out1.open("ShopSignin.txt", ios::app);
-		
+
 		cout << "아이디 입력 : ";
 		cin >> out_line1;
 		cout << "비밀번호 입력 : ";
 		cin >> out_line2;
 
-		out1<< out_line1 << " ";
+		out1 << out_line1 << " ";
 		out1 << out_line2 << endl;
 
 		out1.close();
 	}
-	else if(out_num == 2) {
+	else if (out_num == 2) {
 		out2.open("GuestSignin.txt", ios::app);
 
 		cout << "아이디 입력 : ";
@@ -44,40 +45,46 @@ Signin::Signin() {
 
 		out2.close();
 	}
-	cout << "\n회원가입이 완료되었습니다. \n정보를 확인하시겠습니까? (Y/y) : ";
+	else {
+		GoMain();
+	}
+	cout << "\n회원가입이 완료되었습니다. \n정보를 확인하시겠습니까? 아무키나 누르면 넘어갑니다. (y) : ";
 	cin >> chk;
 	getchar();
 	cout << "\n";
-	if (chk == 'y' || chk == 'Y' && out_num == 1) {
+	if (chk == 'y' && out_num == 1) {
 		string in_line;
 		ifstream in("ShopSignin.txt");
 		while (getline(in, in_line)) {
 			cout << in_line << endl;
 		}
-		in.close();
-		FinishCheck();
 	}
-	else if (chk == 'y' || chk == 'Y' && out_num == 2) {
-		string in_line;
-		ifstream in("GuestSignin.txt");
-		while (getline(in, in_line)) {
-			cout << in_line << endl;
+	else if (chk == 'y' && out_num == 2) {
+		string in_line1;
+		ifstream in1("GuestSignin.txt");
+		while (getline(in1, in_line1)) {
+			cout << in_line1 << endl;
 		}
-		in.close();
+		in1.close();
 		FinishCheck();
 	}
 	else {
-		GoMain();
+		system("cls");
+		chose1 c1;
 	}
 }
 
 void Signin::FinishCheck() {
 	char finish;
-	cout << "\n메인화면으로 가시겠습니까? 아무키나 누르면 종료됩니다. (Y/y) : ";
+	cout << "\n메뉴주문으로 가시겠습니까? 아무키나 누르면 종료됩니다. (Y/y) : ";
 	cin >> finish;
 	getchar();
 	if (finish == 'y' || finish == 'Y') {
-		GoMain();
+		system("cls");
+		chose1 c1;
+	}
+	else {
+		exit(0);
 	}
 }
 
