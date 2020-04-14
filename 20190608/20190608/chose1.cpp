@@ -197,10 +197,10 @@ chose1::chose1() {
 	cout << "음식 카테고리" << endl;
 
 	//사각형
-	for (int i = 0; i < 3; i++, SquareGap_y += 22) {
-		Rectangle(SquareGap_x, SquareGap_y, 40, 20);
-		Rectangle(SquareGap_x + 43, SquareGap_y, 40, 20);
-	}
+	//for (int i = 0; i < 3; i++, SquareGap_y += 22) {
+		//Rectangle(SquareGap_x, SquareGap_y, 40, 20);
+		//Rectangle(SquareGap_x + 43, SquareGap_y, 40, 20);
+	//}
 
 	//음식
 	PrintChicken(FoodGap_x, FoodGap_y);

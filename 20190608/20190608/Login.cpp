@@ -23,7 +23,7 @@ Login::Login() {
 		char chk = NULL;
 		if (input_num == 1) {
 			input1.open("ShopMember.txt", ios::app);
-			ifstream in("ShopSignin.txt");
+			ifstream in("ShopMember.txt");
 			cout << "아이디 입력 : ";
 			cin >> input_line1;
 			cout << "비밀번호 입력 : ";
@@ -33,7 +33,7 @@ Login::Login() {
 			while (getline(in, in_signin)) {
 				if (in_line.compare(in_signin) != 0) {
 					cout << "로그인 실패" << endl;
-					cout << "다시? 타이블? (y, n) : ";
+					cout << "아무키나 누르시면 메인화면으로 갑니다. : ";
 					cin >> chk;
 					getchar();
 					//cout << "\n";
@@ -66,7 +66,7 @@ Login::Login() {
 			while (getline(in, in_signin)) {
 				if (in_line.compare(in_signin) != 0) {
 					cout << "로그인 실패" << endl;
-					cout << "다시? 타이블? (y, n) : ";
+					cout << "아무키나 누르시면 메인화면으로 갑니다. : ";
 					cin >> chk;
 					getchar();
 					//cout << "\n";

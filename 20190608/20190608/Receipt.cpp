@@ -69,7 +69,7 @@ void Receipt::Rprint(int num) {
 			break;
 
 	default:
-		cout << "잘못입력하셨습니다. 메뉴 화면으로 돌아갑니다.";
+		cout << "잘못입력하셨습니다. 타이틀 화면으로 돌아갑니다.";
 		mainPrint mainP;
 		mainP.Rectangle(3, 2, 110, 24);  //사각형 그리기
 		mainP.title();					 //타이틀 명

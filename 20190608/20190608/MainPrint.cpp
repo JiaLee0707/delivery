@@ -41,7 +41,7 @@ void mainPrint::title() {
 	string a;
 
 	gotoxy(x - 2, y);
-	cout << "> 로그인" << y;
+	cout << "> 로그인";
 	gotoxy(x, y + 1);
 	cout << "회원가입";
 	gotoxy(x - 2, y);

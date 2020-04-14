@@ -81,8 +81,8 @@ void MenuInfo::menuInfo(int num) {
 		chose1 c1;
 	}
 
-	p.gotoxy(4, 25);
-	cout << "> 주문하기";
+	p.gotoxy(5, 25);
+	cout << "주문하기";
 	p.gotoxy(5, 25 + 1);
 	cout << "취소하기";
 
@@ -92,6 +92,11 @@ void MenuInfo::menuInfo(int num) {
 		system("cls");
 		Receipt r;
 		r.Rprint(num);
+
+		p.gotoxy(5, 25);
+		cout << "주문해주셔서 감사합니다. 안전하게 배달하겠습니다~";
+		p.gotoxy(5, 25+1);
+		cout << "엔터를 두 번 누르면 프로그램이 종료됩니다.";
 	}
 	else if (chk == 2) {
 		system("cls");

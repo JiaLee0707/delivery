@@ -74,7 +74,13 @@ Signin::Signin() {
 			}
 		}
 		in.close();
-		FinishCheck();
+		if (out_num == 1) {
+
+		}
+		else {
+			FinishCheck();
+		}
+		
 	}
 	else {
 		system("cls");
@@ -84,7 +90,7 @@ Signin::Signin() {
 
 void Signin::FinishCheck() {
 	char finish;
-	cout << "\n메뉴주문으로 가시겠습니까? 아무키나 누르면 종료됩니다. (Y/y) : ";
+	cout << "\n메뉴주문으로 가시겠습니까? 아무키를 누르면 종료됩니다. (Y/y) : ";
 	cin >> finish;
 	getchar();
 	if (finish == 'y' || finish == 'Y') {
